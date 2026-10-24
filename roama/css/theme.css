@@ -1,0 +1,380 @@
+/*! © ROAMA. Licensed under GPL-2.0-or-later. */
+/* WordPress-only parts on top of css/roama.css (the ROAMA build). Tokens only: var(--roama-*). */
+
+/* The sticky header sits below the admin bar for logged-in users. */
+.admin-bar .site-header {
+  top: var(--wp-admin--admin-bar--height, 32px);
+}
+
+@media (max-width: 600px) {
+  .admin-bar .site-header {
+    top: 0;
+  }
+}
+
+/* Long menu labels and site names wrap instead of widening the page. */
+.site-header__logo,
+.site-nav__link,
+.site-footer__link {
+  overflow-wrap: anywhere;
+}
+
+.site-header__inner > * {
+  min-width: 0;
+}
+
+/* The footer menu (printed only once a menu is assigned to «Меню в підвалі»). */
+.site-footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--roama-space-1) var(--roama-space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--roama-color-text);
+}
+
+/* Footer contacts and socials of «ROAMA: налаштування» (printed only when filled). */
+.site-footer__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--roama-space-4);
+  font-style: normal;
+}
+
+.site-footer__address {
+  overflow-wrap: anywhere;
+}
+
+.site-footer__socials {
+  gap: 0 var(--roama-space-4);
+}
+
+/* Text + image: the image on the left (SCF «Бік картинки» = left). */
+.edge-split--left .edge-split__media {
+  border-radius: 0 var(--roama-radius-l) var(--roama-radius-l) 0;
+}
+
+@media (width >= 56.25em) {
+  .edge-split--left .edge-split__text {
+    grid-area: 1 / content-middle / auto / content-end;
+    padding-right: 0;
+    padding-left: var(--roama-space-6);
+  }
+
+  .edge-split--left .edge-split__media {
+    --roama-edge-to: content-middle;
+  }
+}
+
+/* Long texts from the fields wrap instead of widening the page. Titles break by syllables
+   where the browser can hyphenate (lang uk), a word only as the last resort;
+   texts may break anywhere (links and e-mails in them). */
+.hero__title,
+.section__title,
+.edge-split__title,
+.feature-list__title {
+  hyphens: auto;
+  hyphenate-limit-chars: 8 4 3;
+  overflow-wrap: break-word;
+}
+
+.hero__text,
+.edge-split__text,
+.contact__lead,
+.site-footer__note {
+  overflow-wrap: anywhere;
+}
+
+/* Contact section (the form inside comes from Contact Form 7). */
+.contact__inner {
+  display: grid;
+  gap: var(--roama-space-6);
+}
+
+.contact__text > :last-child {
+  margin-bottom: 0;
+}
+
+.contact__lead {
+  margin: 0;
+  color: var(--roama-color-muted);
+}
+
+.contact__form {
+  min-width: 0;
+}
+
+@media (width >= 56.25em) {
+  .contact__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    align-items: start;
+  }
+}
+
+/* The Contact Form 7 form (inc/cf7.php: CF7's own CSS is off, every state is styled here). */
+:root {
+  --roama-color-error: #b42318;
+  --roama-color-success: #146c34;
+  --roama-color-field-border: color-mix(in srgb, var(--roama-color-muted) 70%, var(--roama-color-surface));
+}
+
+.contact__form {
+  container-type: inline-size;
+}
+
+.wpcf7 {
+  position: relative;
+}
+
+.wpcf7 .screen-reader-response {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.wpcf7 .hidden-fields-container {
+  display: none;
+}
+
+.contact-form {
+  display: grid;
+  gap: var(--roama-space-4);
+  margin: 0;
+}
+
+.contact-form__field {
+  display: grid;
+  gap: var(--roama-space-2);
+  min-width: 0;
+}
+
+.contact-form__label {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.contact-form__optional {
+  color: var(--roama-color-muted);
+  font-weight: 400;
+}
+
+/* The wrap AND the control are blocks: an inline-block textarea would add a baseline gap. */
+.contact-form .wpcf7-form-control-wrap,
+.contact-form__wrap,
+.contact-form__control {
+  display: block;
+}
+
+.contact-form__control {
+  width: 100%;
+  min-height: 3rem;
+  padding: var(--roama-space-3) var(--roama-space-4);
+  border: 1px solid var(--roama-color-field-border);
+  border-radius: var(--roama-radius-m);
+  background: var(--roama-color-surface);
+  color: var(--roama-color-text);
+  line-height: var(--roama-line-height);
+  transition: border-color var(--roama-duration-fast) var(--roama-ease-out);
+}
+
+.contact-form__control::placeholder {
+  color: var(--roama-color-muted);
+  opacity: 1;
+}
+
+.contact-form__control:hover {
+  border-color: var(--roama-color-text);
+}
+
+.contact-form__control:focus-visible {
+  border-color: var(--roama-color-focus);
+  outline-offset: 0;
+}
+
+textarea.contact-form__control {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.contact-form .wpcf7-not-valid,
+.contact-form__control[aria-invalid='true'] {
+  border-color: var(--roama-color-error);
+}
+
+.contact-form .wpcf7-not-valid-tip {
+  display: block;
+  margin-top: var(--roama-space-1);
+  color: var(--roama-color-error);
+  font-size: var(--roama-text-s);
+  font-weight: 600;
+}
+
+/* The honeypot: out of sight and out of reach, still in the form for bots. */
+.contact-form__hp {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.contact-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--roama-space-3);
+}
+
+.contact-form__submit {
+  border: 0;
+  cursor: pointer;
+}
+
+.contact-form.submitting .contact-form__submit {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.contact-form .wpcf7-spinner {
+  display: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--roama-color-border);
+  border-top-color: var(--roama-color-accent);
+  border-radius: var(--roama-radius-round);
+  animation: roama-spin 0.8s linear infinite;
+}
+
+.contact-form.submitting .wpcf7-spinner {
+  display: inline-block;
+}
+
+@keyframes roama-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-form .wpcf7-spinner {
+    animation: none;
+  }
+}
+
+.contact-form__consent {
+  margin: 0;
+  color: var(--roama-color-muted);
+  font-size: var(--roama-text-s);
+  overflow-wrap: anywhere;
+}
+
+.contact-form__consent a {
+  color: var(--roama-color-text);
+}
+
+/* The answer after sending: hidden until CF7 has one. */
+.contact-form .wpcf7-response-output {
+  margin: 0;
+  padding: var(--roama-space-3) var(--roama-space-4);
+  border-left: 4px solid var(--roama-color-error);
+  border-radius: var(--roama-radius-s);
+  background: var(--roama-color-surface);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.contact-form.sent .wpcf7-response-output {
+  border-left-color: var(--roama-color-success);
+  color: var(--roama-color-success);
+}
+
+.contact-form.init .wpcf7-response-output,
+.contact-form.resetting .wpcf7-response-output,
+.contact-form.submitting .wpcf7-response-output,
+.contact-form .wpcf7-response-output:empty {
+  display: none;
+}
+
+@container (width >= 34rem) {
+  .contact-form {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .contact-form > :not(.contact-form__field),
+  .contact-form__field--wide {
+    grid-column: 1 / -1;
+  }
+}
+
+/* About page: the optional image above the text, any ratio. */
+.about__media {
+  margin: 0 0 var(--roama-space-5);
+}
+
+.about__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--roama-radius-l);
+  background: var(--roama-color-border);
+}
+
+/* Content of the editor inside .prose. */
+.prose img,
+.prose video,
+.prose iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose .alignleft {
+  float: left;
+  margin: 0 var(--roama-space-5) var(--roama-space-4) 0;
+}
+
+.prose .alignright {
+  float: right;
+  margin: 0 0 var(--roama-space-4) var(--roama-space-5);
+}
+
+.prose .aligncenter {
+  display: block;
+  margin-inline: auto;
+}
+
+.prose .wp-caption-text,
+.prose figcaption {
+  color: var(--roama-color-muted);
+  font-size: var(--roama-text-s);
+}
+
+.screen-reader-text {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.screen-reader-text:focus {
+  position: static !important;
+  width: auto;
+  height: auto;
+  clip-path: none;
+}

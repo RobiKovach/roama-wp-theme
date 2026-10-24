@@ -1,0 +1,69 @@
+{
+    "key": "group_roama_about",
+    "title": "Сторінка «Про нас»",
+    "fields": [
+        {
+            "key": "field_roama_about_show",
+            "label": "Показувати секцію",
+            "name": "roama_about_show",
+            "type": "true_false",
+            "instructions": "Вимкніть, щоб сховати заголовок, картинку й текст сторінки (шапка й підвал лишаються).",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Так",
+            "ui_off_text": "Ні"
+        },
+        {
+            "key": "field_roama_about_title",
+            "label": "Заголовок",
+            "name": "roama_about_title",
+            "type": "text",
+            "instructions": "До 80 символів. Порожнє — назва сторінки.",
+            "maxlength": 80
+        },
+        {
+            "key": "field_roama_about_image",
+            "label": "Картинка",
+            "name": "roama_about_image",
+            "type": "image",
+            "instructions": "Необов’язково: стоїть над текстом і обрізається до 16:9 по центру. Найкраще — від 1600 px завширшки.",
+            "return_format": "id",
+            "library": "all",
+            "preview_size": "medium",
+            "mime_types": "jpg, jpeg, png, webp, avif"
+        },
+        {
+            "key": "field_roama_about_text",
+            "label": "Текст",
+            "name": "roama_about_text",
+            "type": "wysiwyg",
+            "instructions": "Абзаци, підзаголовки (Заголовок 2), списки, посилання. До 8000 символів без розмітки.",
+            "maxlength": 8000,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/about.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "Сторінка з шаблоном «Про нас».",
+    "show_in_rest": 0,
+    "modified": 1761264000
+}

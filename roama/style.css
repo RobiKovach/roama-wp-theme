@@ -1,0 +1,14 @@
+/*!
+Theme Name: ROAMA base
+Description: Classic WordPress base theme of ROAMA: the ROAMA site markup, CSS and JS, content from Secure Custom Fields, Contact Form 7, leads to Telegram and Google Sheets, a one-command importer.
+Author: ROAMA
+Version: 0.1.1
+Requires at least: 6.5
+Requires PHP: 8.1
+Text Domain: roama
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+© ROAMA. Licensed under GPL-2.0-or-later.
+*/
+
+/* Styles live in css/roama.css (built by wordpress/tools/build-theme.mjs) and css/theme.css (WordPress-only parts). */

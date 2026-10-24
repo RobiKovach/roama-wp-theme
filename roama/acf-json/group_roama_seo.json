@@ -1,0 +1,54 @@
+{
+    "key": "group_roama_seo",
+    "title": "SEO сторінки",
+    "fields": [
+        {
+            "key": "field_roama_seo_title",
+            "label": "Заголовок для пошуку",
+            "name": "roama_seo_title",
+            "type": "text",
+            "instructions": "Заголовок у вкладці браузера й у Google. До 70 символів. Порожнє — назва сторінки й сайту. Якщо встановлено SEO-плагін, тема ці поля не використовує.",
+            "maxlength": 70
+        },
+        {
+            "key": "field_roama_seo_description",
+            "label": "Опис для пошуку",
+            "name": "roama_seo_description",
+            "type": "textarea",
+            "instructions": "Опис під посиланням у Google і в соцмережах. До 160 символів. Порожнє — опис із «ROAMA: налаштування».",
+            "maxlength": 160,
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_roama_seo_image",
+            "label": "Картинка для соцмереж",
+            "name": "roama_seo_image",
+            "type": "image",
+            "instructions": "Показується, коли посиланням діляться. Найкраще — 1200×630. Порожнє — картинка з налаштувань.",
+            "return_format": "id",
+            "library": "all",
+            "preview_size": "medium",
+            "mime_types": "jpg, jpeg, png, webp"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 90,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Заголовок, опис і картинка сторінки для пошуку й соцмереж.",
+    "show_in_rest": 0,
+    "modified": 1761264000
+}

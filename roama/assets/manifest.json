@@ -1,0 +1,136 @@
+{
+  "generator": "roama/wordpress/tools/build-theme.mjs",
+  "files": {
+    "assets/favicon.ico": "1e9836d81aff",
+    "assets/favicon.svg": "607de9233f97",
+    "assets/fonts/OFL-Onest.txt": "071195d8806e",
+    "assets/fonts/OFL-Unbounded.txt": "31e5d4e83955",
+    "assets/fonts/Onest-Variable.woff2": "7edbc98f7a0b",
+    "assets/fonts/Unbounded-Variable.woff2": "48fea02e45f0",
+    "assets/images/edge-portrait-1024.avif": "03a8ea803bf1",
+    "assets/images/edge-portrait-1024.jpg": "b728e575674e",
+    "assets/images/edge-portrait-1024.webp": "95d52f597135",
+    "assets/images/edge-portrait-1440.avif": "25b069769252",
+    "assets/images/edge-portrait-1440.jpg": "c38774c459ee",
+    "assets/images/edge-portrait-1440.webp": "20b71c99df15",
+    "assets/images/edge-portrait-1600.avif": "28c695cbf0b6",
+    "assets/images/edge-portrait-1600.jpg": "0c8c9336a924",
+    "assets/images/edge-portrait-1600.webp": "9c5e83b2b911",
+    "assets/images/edge-portrait-480.avif": "614f19f6b92d",
+    "assets/images/edge-portrait-480.jpg": "e4fde4b8ed6a",
+    "assets/images/edge-portrait-480.webp": "d40c86b1b5a2",
+    "assets/images/edge-portrait-768.avif": "2fd60a3158c7",
+    "assets/images/edge-portrait-768.jpg": "abfa65ac3249",
+    "assets/images/edge-portrait-768.webp": "d7b79f904f96",
+    "assets/images/hero-landscape-1024.avif": "54379d8d142c",
+    "assets/images/hero-landscape-1024.jpg": "1447c38f994d",
+    "assets/images/hero-landscape-1024.webp": "652b514eb7b1",
+    "assets/images/hero-landscape-1440.avif": "80dba3bd1407",
+    "assets/images/hero-landscape-1440.jpg": "c62b883a65fb",
+    "assets/images/hero-landscape-1440.webp": "5e4f34219e80",
+    "assets/images/hero-landscape-1920.avif": "ad81c8314dff",
+    "assets/images/hero-landscape-1920.jpg": "1a05ed8a12aa",
+    "assets/images/hero-landscape-1920.webp": "156cb2234f0f",
+    "assets/images/hero-landscape-480.avif": "a7da074c5da0",
+    "assets/images/hero-landscape-480.jpg": "7916ff76a508",
+    "assets/images/hero-landscape-480.webp": "4cb0e6979b45",
+    "assets/images/hero-landscape-768.avif": "06580ed5547f",
+    "assets/images/hero-landscape-768.jpg": "6f31b59d0744",
+    "assets/images/hero-landscape-768.webp": "54987b5d89d5",
+    "assets/images/tile-square-1024.avif": "fd71b4e194ac",
+    "assets/images/tile-square-1024.png": "071491783883",
+    "assets/images/tile-square-1024.webp": "eb16c8e999ef",
+    "assets/images/tile-square-1200.avif": "b021f624ab7c",
+    "assets/images/tile-square-1200.png": "2d129477b5cf",
+    "assets/images/tile-square-1200.webp": "e9448d03498e",
+    "assets/images/tile-square-480.avif": "46e6ee7e4d68",
+    "assets/images/tile-square-480.png": "2e8199a0dfa7",
+    "assets/images/tile-square-480.webp": "e3370403ac56",
+    "assets/images/tile-square-768.avif": "5b1662707ec5",
+    "assets/images/tile-square-768.png": "e5d1b8edd4df",
+    "assets/images/tile-square-768.webp": "444f21a617f7",
+    "assets/sprite.svg": "24a8ebf09a06",
+    "css/roama.css": "041c2a1a1b5a",
+    "js/roama.js": "7dd27fdc3757"
+  },
+  "pictures": {
+    "edge-portrait": {
+      "width": 1600,
+      "height": 2000,
+      "formats": {
+        "jpg": [
+          480,
+          768,
+          1024,
+          1440,
+          1600
+        ],
+        "webp": [
+          480,
+          768,
+          1024,
+          1440,
+          1600
+        ],
+        "avif": [
+          480,
+          768,
+          1024,
+          1440,
+          1600
+        ]
+      }
+    },
+    "hero-landscape": {
+      "width": 2400,
+      "height": 1350,
+      "formats": {
+        "jpg": [
+          480,
+          768,
+          1024,
+          1440,
+          1920
+        ],
+        "webp": [
+          480,
+          768,
+          1024,
+          1440,
+          1920
+        ],
+        "avif": [
+          480,
+          768,
+          1024,
+          1440,
+          1920
+        ]
+      }
+    },
+    "tile-square": {
+      "width": 1200,
+      "height": 1200,
+      "formats": {
+        "png": [
+          480,
+          768,
+          1024,
+          1200
+        ],
+        "webp": [
+          480,
+          768,
+          1024,
+          1200
+        ],
+        "avif": [
+          480,
+          768,
+          1024,
+          1200
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,447 @@
+{
+    "key": "group_roama_front",
+    "title": "Головна сторінка",
+    "fields": [
+        {
+            "key": "field_roama_tab_hero",
+            "label": "Перший екран",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_roama_hero_show",
+            "label": "Показувати секцію",
+            "name": "roama_hero_show",
+            "type": "true_false",
+            "instructions": "Вимкніть, щоб сховати перший екран повністю.",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Так",
+            "ui_off_text": "Ні"
+        },
+        {
+            "key": "field_roama_hero_eyebrow",
+            "label": "Підпис над заголовком",
+            "name": "roama_hero_eyebrow",
+            "type": "text",
+            "instructions": "Коротке слово над заголовком. До 40 символів. Порожнє — підпису немає.",
+            "maxlength": 40
+        },
+        {
+            "key": "field_roama_hero_title",
+            "label": "Заголовок",
+            "name": "roama_hero_title",
+            "type": "text",
+            "instructions": "Головний заголовок сторінки. До 80 символів.",
+            "maxlength": 80
+        },
+        {
+            "key": "field_roama_hero_text",
+            "label": "Текст",
+            "name": "roama_hero_text",
+            "type": "textarea",
+            "instructions": "Короткий опис під заголовком, один абзац. До 300 символів. Порожнє — без тексту.",
+            "maxlength": 300,
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_roama_hero_button_text",
+            "label": "Текст кнопки",
+            "name": "roama_hero_button_text",
+            "type": "text",
+            "instructions": "До 24 символів. Порожнє — кнопки немає.",
+            "maxlength": 24
+        },
+        {
+            "key": "field_roama_hero_button_page",
+            "label": "Куди веде кнопка",
+            "name": "roama_hero_button_page",
+            "type": "post_object",
+            "instructions": "Оберіть сторінку сайту. Порожнє — сторінка «Про нас».",
+            "post_type": [
+                "page"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_roama_hero_image",
+            "label": "Картинка",
+            "name": "roama_hero_image",
+            "type": "image",
+            "instructions": "Обрізається до пропорції 16:9 по центру. Найкраще — від 1920 px завширшки, головне — в центрі кадру. Заповніть «Альтернативний текст» картинки в медіатеці. Порожнє — демо-картинка теми.",
+            "return_format": "id",
+            "library": "all",
+            "preview_size": "medium",
+            "mime_types": "jpg, jpeg, png, webp, avif"
+        },
+        {
+            "key": "field_roama_tab_anchors",
+            "label": "Меню якорів",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_roama_anchors_show",
+            "label": "Показувати секцію",
+            "name": "roama_anchors_show",
+            "type": "true_false",
+            "instructions": "Рядок посилань на секції цієї сторінки. Посилання на сховані секції зникають самі.",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Так",
+            "ui_off_text": "Ні"
+        },
+        {
+            "key": "field_roama_anchors_label",
+            "label": "Підпис меню",
+            "name": "roama_anchors_label",
+            "type": "text",
+            "instructions": "До 40 символів. Порожнє — без підпису.",
+            "maxlength": 40
+        },
+        {
+            "key": "field_roama_anchors_features",
+            "label": "Посилання на «Картки»",
+            "name": "roama_anchors_features",
+            "type": "text",
+            "instructions": "До 24 символів. Порожнє — посилання немає.",
+            "maxlength": 24
+        },
+        {
+            "key": "field_roama_anchors_grid",
+            "label": "Посилання на «Текст і картинка»",
+            "name": "roama_anchors_grid",
+            "type": "text",
+            "instructions": "До 24 символів. Порожнє — посилання немає.",
+            "maxlength": 24
+        },
+        {
+            "key": "field_roama_anchors_assets",
+            "label": "Посилання на «Ресурси»",
+            "name": "roama_anchors_assets",
+            "type": "text",
+            "instructions": "До 24 символів. Порожнє — посилання немає.",
+            "maxlength": 24
+        },
+        {
+            "key": "field_roama_anchors_motion",
+            "label": "Посилання на «Скрол і рух»",
+            "name": "roama_anchors_motion",
+            "type": "text",
+            "instructions": "До 24 символів. Порожнє — посилання немає.",
+            "maxlength": 24
+        },
+        {
+            "key": "field_roama_anchors_contact",
+            "label": "Посилання на «Контакти»",
+            "name": "roama_anchors_contact",
+            "type": "text",
+            "instructions": "До 24 символів. Порожнє — посилання немає.",
+            "maxlength": 24
+        },
+        {
+            "key": "field_roama_tab_features",
+            "label": "Картки",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_roama_features_show",
+            "label": "Показувати секцію",
+            "name": "roama_features_show",
+            "type": "true_false",
+            "instructions": "Вимкніть, щоб сховати секцію карток повністю.",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Так",
+            "ui_off_text": "Ні"
+        },
+        {
+            "key": "field_roama_features_title",
+            "label": "Заголовок секції",
+            "name": "roama_features_title",
+            "type": "text",
+            "instructions": "До 80 символів.",
+            "maxlength": 80
+        },
+        {
+            "key": "field_roama_features_cards",
+            "label": "Картки",
+            "name": "roama_features_cards",
+            "type": "repeater",
+            "instructions": "Від 1 до 12 карток. Сітка сама вирішує, скільки колонок поміститься. Порядок змінюється перетягуванням.",
+            "layout": "block",
+            "min": 1,
+            "max": 12,
+            "collapsed": "field_roama_features_card_title",
+            "button_label": "Додати картку",
+            "pagination": 0,
+            "sub_fields": [
+                {
+                    "key": "field_roama_features_card_icon",
+                    "label": "Іконка",
+                    "name": "icon",
+                    "type": "select",
+                    "instructions": "Іконка зі спрайту теми.",
+                    "choices": {
+                        "arrow": "Стрілка",
+                        "grid": "Сітка",
+                        "image": "Картинка",
+                        "type": "Текст"
+                    },
+                    "default_value": "type",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "parent_repeater": "field_roama_features_cards"
+                },
+                {
+                    "key": "field_roama_features_card_title",
+                    "label": "Заголовок картки",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "До 100 символів; довгий заголовок переноситься.",
+                    "maxlength": 100,
+                    "parent_repeater": "field_roama_features_cards"
+                },
+                {
+                    "key": "field_roama_features_card_text",
+                    "label": "Текст картки",
+                    "name": "text",
+                    "type": "textarea",
+                    "instructions": "Один абзац. До 220 символів.",
+                    "maxlength": 220,
+                    "rows": 3,
+                    "new_lines": "",
+                    "parent_repeater": "field_roama_features_cards"
+                }
+            ]
+        },
+        {
+            "key": "field_roama_tab_edge",
+            "label": "Текст і картинка",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_roama_edge_show",
+            "label": "Показувати секцію",
+            "name": "roama_edge_show",
+            "type": "true_false",
+            "instructions": "Вимкніть, щоб сховати секцію «текст і картинка до краю екрана» повністю.",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Так",
+            "ui_off_text": "Ні"
+        },
+        {
+            "key": "field_roama_edge_title",
+            "label": "Заголовок",
+            "name": "roama_edge_title",
+            "type": "text",
+            "instructions": "До 80 символів.",
+            "maxlength": 80
+        },
+        {
+            "key": "field_roama_edge_text",
+            "label": "Текст",
+            "name": "roama_edge_text",
+            "type": "textarea",
+            "instructions": "Порожній рядок починає новий абзац. До 600 символів.",
+            "maxlength": 600,
+            "rows": 6,
+            "new_lines": ""
+        },
+        {
+            "key": "field_roama_edge_image",
+            "label": "Картинка",
+            "name": "roama_edge_image",
+            "type": "image",
+            "instructions": "Заповнює блок до краю екрана й обрізається по центру; підходить будь-яка пропорція, найкраще вертикальна 4:5 від 1600 px заввишки. Порожнє — демо-картинка теми.",
+            "return_format": "id",
+            "library": "all",
+            "preview_size": "medium",
+            "mime_types": "jpg, jpeg, png, webp, avif"
+        },
+        {
+            "key": "field_roama_edge_side",
+            "label": "Бік картинки",
+            "name": "roama_edge_side",
+            "type": "button_group",
+            "instructions": "На телефоні картинка завжди під текстом.",
+            "choices": {
+                "right": "Праворуч",
+                "left": "Ліворуч"
+            },
+            "default_value": "right",
+            "allow_null": 0,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_roama_tab_assets",
+            "label": "Ресурси (демо)",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_roama_assets_show",
+            "label": "Показувати секцію",
+            "name": "roama_assets_show",
+            "type": "true_false",
+            "instructions": "Демо-секція шаблону про картинки, шрифти й іконки. У клієнтському проєкті її замінюють власною або вимикають.",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Так",
+            "ui_off_text": "Ні"
+        },
+        {
+            "key": "field_roama_assets_title",
+            "label": "Заголовок секції",
+            "name": "roama_assets_title",
+            "type": "text",
+            "instructions": "До 80 символів.",
+            "maxlength": 80
+        },
+        {
+            "key": "field_roama_tab_sizes",
+            "label": "Плавні розміри (демо)",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_roama_sizes_show",
+            "label": "Показувати секцію",
+            "name": "roama_sizes_show",
+            "type": "true_false",
+            "instructions": "Широкий блок з текстом. Вимкніть, щоб сховати його повністю.",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Так",
+            "ui_off_text": "Ні"
+        },
+        {
+            "key": "field_roama_sizes_title",
+            "label": "Заголовок",
+            "name": "roama_sizes_title",
+            "type": "text",
+            "instructions": "До 80 символів.",
+            "maxlength": 80
+        },
+        {
+            "key": "field_roama_sizes_text",
+            "label": "Текст",
+            "name": "roama_sizes_text",
+            "type": "textarea",
+            "instructions": "Порожній рядок починає новий абзац. До 400 символів.",
+            "maxlength": 400,
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_roama_tab_motion",
+            "label": "Скрол і рух (демо)",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_roama_motion_show",
+            "label": "Показувати секцію",
+            "name": "roama_motion_show",
+            "type": "true_false",
+            "instructions": "Демо-секція шаблону про плавну прокрутку. У клієнтському проєкті її замінюють власною або вимикають.",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Так",
+            "ui_off_text": "Ні"
+        },
+        {
+            "key": "field_roama_motion_title",
+            "label": "Заголовок секції",
+            "name": "roama_motion_title",
+            "type": "text",
+            "instructions": "До 80 символів.",
+            "maxlength": 80
+        },
+        {
+            "key": "field_roama_tab_contact",
+            "label": "Контакти",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_roama_contact_show",
+            "label": "Показувати секцію",
+            "name": "roama_contact_show",
+            "type": "true_false",
+            "instructions": "Секція з формою. Видно лише тоді, коли форму обрано в «ROAMA: налаштування» → «Форма».",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Так",
+            "ui_off_text": "Ні"
+        },
+        {
+            "key": "field_roama_contact_title",
+            "label": "Заголовок",
+            "name": "roama_contact_title",
+            "type": "text",
+            "instructions": "До 80 символів.",
+            "maxlength": 80
+        },
+        {
+            "key": "field_roama_contact_text",
+            "label": "Текст біля форми",
+            "name": "roama_contact_text",
+            "type": "textarea",
+            "instructions": "Один абзац. До 300 символів. Порожнє — без тексту.",
+            "maxlength": 300,
+            "rows": 3,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "Секції головної сторінки: кожна має перемикач «Показувати секцію».",
+    "show_in_rest": 0,
+    "modified": 1761264000
+}
